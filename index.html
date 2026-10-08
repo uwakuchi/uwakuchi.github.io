@@ -3,12 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fafafa">
-  <meta name="description" content="uwakuchi makes software and music.">
+  <meta name="theme-color" content="#f7f7f6">
+  <meta name="description" content="uwakuchi makes software and music. Small experiments in software, research, and sound.">
   <title>uwakuchi — Software / Music</title>
+  <link rel="preload" as="image" href="assets/sea-of-clouds.webp">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="atmosphere" aria-hidden="true">
+    <img src="assets/sea-of-clouds.webp" alt="">
+  </div>
+
   <div class="page-shell">
     <header class="site-header">
       <a class="wordmark" href="#top" aria-label="uwakuchi, home">uwakuchi<span class="wordmark-dot">.</span></a>
@@ -17,9 +22,20 @@
 
     <main id="top">
       <section class="intro" aria-labelledby="intro-title">
-        <p class="eyebrow">uwakuchi</p>
-        <h1 id="intro-title">Software<br>&amp; music.</h1>
-        <p class="intro-copy">I make software and music.</p>
+        <div class="intro-text">
+          <p class="eyebrow">uwakuchi</p>
+          <h1 id="intro-title">Software<br>&amp; music.</h1>
+          <p class="intro-copy">I make software and music.<br><span>Small experiments in software, research, and sound.</span></p>
+          <nav class="intro-links" aria-label="Profiles">
+            <a href="https://github.com/uwakuchi" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+            <a href="https://x.com/_uwakuchi" target="_blank" rel="noopener noreferrer">X <span aria-hidden="true">↗</span></a>
+          </nav>
+        </div>
+        <div class="intro-marks" aria-hidden="true">
+          <svg class="intro-diagonal" viewBox="0 0 100 100" preserveAspectRatio="none"><line x1="92" y1="0" x2="34" y2="100" vector-effect="non-scaling-stroke"/></svg>
+          <span class="intro-dot"></span>
+          <p class="intro-verse">Ideas<br>papers<br>sounds<br>and<br>somewhere<br>in between.</p>
+        </div>
       </section>
 
       <section class="featured" aria-labelledby="featured-title">
@@ -28,15 +44,50 @@
           <span class="section-line" aria-hidden="true"></span>
         </div>
         <article class="project-card">
-          <div class="project-art">
-            <img src="assets/paperdial-studio.png" alt="PaperDialのラジオスタジオを描いたビジュアル">
-            <span class="art-label">PAPERDIAL / RESEARCH RADIO</span>
-          </div>
+          <a class="project-art" href="https://paperdial.app/" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+            <img class="studio" src="assets/paperdial-studio.webp" alt="">
+            <span class="pd-brand">
+              <svg viewBox="0 0 256 256" fill="currentColor"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM72,152a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm32,32a8,8,0,0,1-16,0V72a8,8,0,0,1,16,0Zm32-16a8,8,0,0,1-16,0V88a8,8,0,0,1,16,0Zm32-16a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm32,8a8,8,0,0,1-16,0V96a8,8,0,0,1,16,0Z"/></svg>
+              PaperDial
+            </span>
+            <svg class="pd-dial" viewBox="0 0 300 300">
+              <defs>
+                <linearGradient id="dial-glow" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#ffc58f"/>
+                  <stop offset=".55" stop-color="#ff9d4d"/>
+                  <stop offset="1" stop-color="#ff9d4d" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <circle cx="150" cy="150" r="138" class="dial-ring"/>
+              <circle cx="150" cy="150" r="112" class="dial-ticks"/>
+              <path d="M 150 12 A 138 138 0 0 0 30 219" class="dial-arc"/>
+              <circle cx="150" cy="12" r="3.5" class="dial-needle"/>
+            </svg>
+            <span class="pd-paper">
+              <span class="pd-paper-head">Paper 01 · Brief</span>
+              <i></i><i></i><i></i><i></i><i class="short"></i>
+              <i class="gap"></i><i></i><i></i><i class="short"></i>
+            </span>
+            <span class="pd-player">
+              <span class="pd-player-top"><span class="pd-onair"><i></i> ON AIR</span><span class="pd-mono">Today's dial</span></span>
+              <span class="pd-theme">Your Theme · ~12 min</span>
+              <img class="pd-wave" src="assets/paperdial-wave.svg" alt="">
+              <span class="pd-list">
+                <span><i class="ring"></i>Opening<em>0:30</em></span>
+                <span class="on"><i></i>Paper 01 · Brief<em>3:10</em></span>
+                <span><i class="ring"></i>DJ Segue<em>0:25</em></span>
+                <span class="on dim"><i></i>Paper 02 · Brief<em>3:40</em></span>
+              </span>
+            </span>
+          </a>
           <div class="project-copy">
-            <p class="project-type">SOFTWARE / RESEARCH</p>
+            <p class="project-type">Software / Research</p>
             <h2 id="featured-title"><a href="https://paperdial.app/" target="_blank" rel="noopener noreferrer">PaperDial <span aria-hidden="true">↗</span></a></h2>
-            <p>Research Radio for papers.<br>Every paper has a story. Tune in.</p>
-            <span class="status"><span class="status-dot"></span> Paper research</span>
+            <p class="project-lede">Research Radio for papers.<br>Every paper has a story. Tune in.</p>
+            <ul class="tags" aria-label="Topics">
+              <li>LLM</li><li>Research</li><li>Audio</li>
+            </ul>
+            <a class="card-link project-link" href="https://paperdial.app/" target="_blank" rel="noopener noreferrer">View project <span aria-hidden="true">↗</span></a>
           </div>
         </article>
       </section>
@@ -48,19 +99,30 @@
         </div>
         <div class="practice-grid">
           <article class="practice-card music-card">
-            <img class="music-cover" src="assets/thunder-moon.jpg" alt="uwakuchiの楽曲 Thunder Moon のジャケットアート">
+            <span class="card-symbol" aria-hidden="true">♫</span>
+            <figure class="music-cover">
+              <img src="assets/thunder-moon.jpg" alt="uwakuchiの楽曲 Thunder Moon のジャケットアート">
+              <figcaption>Thunder Moon</figcaption>
+            </figure>
             <div class="music-info">
-              <div class="card-top"><span class="index">A</span><span class="card-symbol" aria-hidden="true">♫</span></div>
+              <img class="music-wave" src="assets/waveform.svg" alt="" aria-hidden="true">
               <h2><a href="https://t.co/SnNW9cel16" target="_blank" rel="noopener noreferrer">Music <span aria-hidden="true">↗</span></a></h2>
               <p>Music and audio projects.</p>
-              <span class="card-foot">MUSIC</span>
+              <ul class="tags" aria-label="Topics">
+                <li>Music</li><li>Audio</li>
+              </ul>
             </div>
           </article>
           <article class="practice-card kaggle-card">
-            <div class="card-top"><span class="index">B</span><span class="card-symbol kaggle-symbol" aria-hidden="true">K</span></div>
-            <h2>Kaggle</h2>
-            <p>Competitions Expert</p>
-            <a class="card-link" href="https://www.kaggle.com/ao9mame" target="_blank" rel="noopener noreferrer" aria-label="Kaggle profile: uwakuchi">View profile <span aria-hidden="true">↗</span></a>
+            <img class="kaggle-scatter" src="assets/scatter.svg" alt="" aria-hidden="true">
+            <div class="kaggle-info">
+              <h2>Kaggle</h2>
+              <p>Competitions Expert.</p>
+              <ul class="tags" aria-label="Topics">
+                <li>ML</li><li>Competitions</li><li>Data</li>
+              </ul>
+              <a class="card-link" href="https://www.kaggle.com/ao9mame" target="_blank" rel="noopener noreferrer" aria-label="Kaggle profile: uwakuchi">View profile <span aria-hidden="true">↗</span></a>
+            </div>
           </article>
         </div>
       </section>
@@ -71,10 +133,7 @@
         <p class="eyebrow">Elsewhere</p>
         <p class="footer-note">Profiles and code.</p>
       </div>
-      <nav class="social-links" aria-label="Social links">
-        <a href="https://github.com/uwakuchi" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-      </nav>
-      <p class="copyright">© <span id="year">2026</span> uwakuchi</p>
+      <p class="copyright">© <span id="year">2026</span> uwakuchi.</p>
     </footer>
   </div>
 </body>
